@@ -1,0 +1,135 @@
+Pi is roughly 3.141707141707142
+spark-submit --conf spark.yarn.am.memory=2g --conf spark.yarn.am.memoryOverhead=1g --master yarn --deploy-mode client --class org.apache.spark.examples.SparkPi /opt/spark/examples/jars/spark-examples_2.11-2.4.0.jar 10
+FO SparkContext: Running Spark version 2.4.0
+18/12/21 13:25:02 INFO SparkContext: Submitted application: Spark Pi
+18/12/21 13:25:02 INFO SecurityManager: Changing view acls to: hduser2
+18/12/21 13:25:02 INFO SecurityManager: Changing modify acls to: hduser2
+18/12/21 13:25:02 INFO SecurityManager: Changing view acls groups to: 
+18/12/21 13:25:02 INFO SecurityManager: Changing modify acls groups to: 
+18/12/21 13:25:02 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hduser2); groups with view permissions: Set(); users  with modify permissions: Set(hduser2); groups with modify permissions: Set()
+18/12/21 13:25:02 INFO Utils: Successfully started service 'sparkDriver' on port 36215.
+18/12/21 13:25:02 INFO SparkEnv: Registering MapOutputTracker
+18/12/21 13:25:02 INFO SparkEnv: Registering BlockManagerMaster
+18/12/21 13:25:02 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+18/12/21 13:25:02 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+18/12/21 13:25:02 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-eb310053-91bf-4f89-bd63-c20566596468
+18/12/21 13:25:02 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+18/12/21 13:25:02 INFO SparkEnv: Registering OutputCommitCoordinator
+18/12/21 13:25:02 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+18/12/21 13:25:02 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.0.39:4040
+18/12/21 13:25:02 INFO SparkContext: Added JAR file:/opt/spark/examples/jars/spark-examples_2.11-2.4.0.jar at spark://192.168.0.39:36215/jars/spark-examples_2.11-2.4.0.jar with timestamp 1545391502938
+18/12/21 13:25:03 INFO RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+18/12/21 13:25:03 INFO Client: Requesting a new application from cluster with 1 NodeManagers
+18/12/21 13:25:03 INFO Client: Verifying our application has not requested more than the maximum memory capability of the cluster (8192 MB per container)
+18/12/21 13:25:03 INFO Client: Will allocate AM container, with 3072 MB memory including 1024 MB overhead
+18/12/21 13:25:03 INFO Client: Setting up container launch context for our AM
+18/12/21 13:25:03 INFO Client: Setting up the launch environment for our AM container
+18/12/21 13:25:03 INFO Client: Preparing resources for our AM container
+18/12/21 13:25:03 WARN Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+18/12/21 13:25:04 INFO Client: Uploading resource file:/tmp/spark-cafbff4d-af37-4703-bfb8-3354cdef0c4c/__spark_libs__7329604857152509516.zip -> hdfs://localhost:9010/user/hduser2/.sparkStaging/application_1545388712996_0006/__spark_libs__7329604857152509516.zip
+18/12/21 13:25:05 INFO Client: Uploading resource file:/tmp/spark-cafbff4d-af37-4703-bfb8-3354cdef0c4c/__spark_conf__6096377961211315126.zip -> hdfs://localhost:9010/user/hduser2/.sparkStaging/application_1545388712996_0006/__spark_conf__.zip
+18/12/21 13:25:05 INFO SecurityManager: Changing view acls to: hduser2
+18/12/21 13:25:05 INFO SecurityManager: Changing modify acls to: hduser2
+18/12/21 13:25:05 INFO SecurityManager: Changing view acls groups to: 
+18/12/21 13:25:05 INFO SecurityManager: Changing modify acls groups to: 
+18/12/21 13:25:05 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hduser2); groups with view permissions: Set(); users  with modify permissions: Set(hduser2); groups with modify permissions: Set()
+18/12/21 13:25:06 INFO Client: Submitting application application_1545388712996_0006 to ResourceManager
+18/12/21 13:25:06 INFO YarnClientImpl: Submitted application application_1545388712996_0006
+18/12/21 13:25:06 INFO SchedulerExtensionServices: Starting Yarn extension services with app application_1545388712996_0006 and attemptId None
+18/12/21 13:25:07 INFO Client: Application report for application_1545388712996_0006 (state: ACCEPTED)
+18/12/21 13:25:07 INFO Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1545391506391
+	 final status: UNDEFINED
+	 tracking URL: http://udu:8088/proxy/application_1545388712996_0006/
+	 user: hduser2
+18/12/21 13:25:08 INFO Client: Application report for application_1545388712996_0006 (state: ACCEPTED)
+18/12/21 13:25:09 INFO Client: Application report for application_1545388712996_0006 (state: ACCEPTED)
+18/12/21 13:25:10 INFO YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> udu, PROXY_URI_BASES -> http://udu:8088/proxy/application_1545388712996_0006), /proxy/application_1545388712996_0006
+18/12/21 13:25:10 INFO JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /jobs, /jobs/json, /jobs/job, /jobs/job/json, /stages, /stages/json, /stages/stage, /stages/stage/json, /stages/pool, /stages/pool/json, /storage, /storage/json, /storage/rdd, /storage/rdd/json, /environment, /environment/json, /executors, /executors/json, /executors/threadDump, /executors/threadDump/json, /static, /, /api, /jobs/job/kill, /stages/stage/kill.
+18/12/21 13:25:10 INFO Client: Application report for application_1545388712996_0006 (state: RUNNING)
+18/12/21 13:25:10 INFO Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 192.168.0.39
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1545391506391
+	 final status: UNDEFINED
+	 tracking URL: http://udu:8088/proxy/application_1545388712996_0006/
+	 user: hduser2
+18/12/21 13:25:10 INFO YarnClientSchedulerBackend: Application application_1545388712996_0006 has started running.
+18/12/21 13:25:10 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33669.
+18/12/21 13:25:10 INFO NettyBlockTransferService: Server created on 192.168.0.39:33669
+18/12/21 13:25:10 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+18/12/21 13:25:10 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.0.39, 33669, None)
+18/12/21 13:25:10 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.0.39:33669 with 366.3 MB RAM, BlockManagerId(driver, 192.168.0.39, 33669, None)
+18/12/21 13:25:10 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.0.39, 33669, None)
+18/12/21 13:25:10 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.0.39, 33669, None)
+18/12/21 13:25:10 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+18/12/21 13:25:10 INFO JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /metrics/json.
+18/12/21 13:25:10 INFO EventLoggingListener: Logging events to hdfs://localhost:9010/spark-logs/application_1545388712996_0006
+18/12/21 13:25:13 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.0.39:38568) with ID 1
+18/12/21 13:25:13 INFO BlockManagerMasterEndpoint: Registering block manager udu:46465 with 366.3 MB RAM, BlockManagerId(1, udu, 46465, None)
+18/12/21 13:25:15 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.0.39:38574) with ID 2
+18/12/21 13:25:15 INFO YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+18/12/21 13:25:15 INFO BlockManagerMasterEndpoint: Registering block manager udu:32823 with 366.3 MB RAM, BlockManagerId(2, udu, 32823, None)
+18/12/21 13:25:16 INFO SparkContext: Starting job: reduce at SparkPi.scala:38
+18/12/21 13:25:16 INFO DAGScheduler: Got job 0 (reduce at SparkPi.scala:38) with 10 output partitions
+18/12/21 13:25:16 INFO DAGScheduler: Final stage: ResultStage 0 (reduce at SparkPi.scala:38)
+18/12/21 13:25:16 INFO DAGScheduler: Parents of final stage: List()
+18/12/21 13:25:16 INFO DAGScheduler: Missing parents: List()
+18/12/21 13:25:16 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at map at SparkPi.scala:34), which has no missing parents
+18/12/21 13:25:16 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 1936.0 B, free 366.3 MB)
+18/12/21 13:25:16 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 1256.0 B, free 366.3 MB)
+18/12/21 13:25:16 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.0.39:33669 (size: 1256.0 B, free: 366.3 MB)
+18/12/21 13:25:16 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1161
+18/12/21 13:25:16 INFO DAGScheduler: Submitting 10 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at map at SparkPi.scala:34) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+18/12/21 13:25:16 INFO YarnScheduler: Adding task set 0.0 with 10 tasks
+18/12/21 13:25:16 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, udu, executor 1, partition 0, PROCESS_LOCAL, 7877 bytes)
+18/12/21 13:25:16 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, udu, executor 2, partition 1, PROCESS_LOCAL, 7877 bytes)
+18/12/21 13:25:16 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on udu:32823 (size: 1256.0 B, free: 366.3 MB)
+18/12/21 13:25:16 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on udu:46465 (size: 1256.0 B, free: 366.3 MB)
+18/12/21 13:25:16 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, udu, executor 2, partition 2, PROCESS_LOCAL, 7877 bytes)
+18/12/21 13:25:16 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, udu, executor 1, partition 3, PROCESS_LOCAL, 7877 bytes)
+18/12/21 13:25:16 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 436 ms on udu (executor 1) (1/10)
+18/12/21 13:25:16 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 428 ms on udu (executor 2) (2/10)
+18/12/21 13:25:16 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4, udu, executor 2, partition 4, PROCESS_LOCAL, 7877 bytes)
+18/12/21 13:25:16 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 37 ms on udu (executor 2) (3/10)
+18/12/21 13:25:16 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5, udu, executor 1, partition 5, PROCESS_LOCAL, 7877 bytes)
+18/12/21 13:25:16 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 39 ms on udu (executor 1) (4/10)
+18/12/21 13:25:16 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6, udu, executor 2, partition 6, PROCESS_LOCAL, 7877 bytes)
+18/12/21 13:25:16 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 24 ms on udu (executor 2) (5/10)
+18/12/21 13:25:16 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7, udu, executor 1, partition 7, PROCESS_LOCAL, 7877 bytes)
+18/12/21 13:25:16 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 35 ms on udu (executor 1) (6/10)
+18/12/21 13:25:16 INFO TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8, udu, executor 2, partition 8, PROCESS_LOCAL, 7877 bytes)
+18/12/21 13:25:16 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 31 ms on udu (executor 2) (7/10)
+18/12/21 13:25:16 INFO TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9, udu, executor 1, partition 9, PROCESS_LOCAL, 7877 bytes)
+18/12/21 13:25:16 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 23 ms on udu (executor 1) (8/10)
+18/12/21 13:25:16 INFO TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 24 ms on udu (executor 1) (9/10)
+18/12/21 13:25:16 INFO TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 35 ms on udu (executor 2) (10/10)
+18/12/21 13:25:16 INFO YarnScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+18/12/21 13:25:16 INFO DAGScheduler: ResultStage 0 (reduce at SparkPi.scala:38) finished in 0.690 s
+18/12/21 13:25:16 INFO DAGScheduler: Job 0 finished: reduce at SparkPi.scala:38, took 0.730837 s
+18/12/21 13:25:16 INFO SparkUI: Stopped Spark web UI at http://192.168.0.39:4040
+18/12/21 13:25:16 INFO YarnClientSchedulerBackend: Interrupting monitor thread
+18/12/21 13:25:16 INFO YarnClientSchedulerBackend: Shutting down all executors
+18/12/21 13:25:16 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+18/12/21 13:25:16 INFO SchedulerExtensionServices: Stopping SchedulerExtensionServices
+(serviceOption=None,
+ services=List(),
+ started=false)
+18/12/21 13:25:16 INFO YarnClientSchedulerBackend: Stopped
+18/12/21 13:25:17 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+18/12/21 13:25:17 INFO MemoryStore: MemoryStore cleared
+18/12/21 13:25:17 INFO BlockManager: BlockManager stopped
+18/12/21 13:25:17 INFO BlockManagerMaster: BlockManagerMaster stopped
+18/12/21 13:25:17 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+18/12/21 13:25:17 INFO SparkContext: Successfully stopped SparkContext
+18/12/21 13:25:17 INFO ShutdownHookManager: Shutdown hook called
+18/12/21 13:25:17 INFO ShutdownHookManager: Deleting directory /tmp/spark-0064c011-9936-4b51-88cb-35b1f0535545
+18/12/21 13:25:17 INFO ShutdownHookManager: Deleting directory /tmp/spark-cafbff4d-af37-4703-bfb8-3354cdef0c4c
