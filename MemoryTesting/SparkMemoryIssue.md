@@ -1,5 +1,5 @@
 ---
-title: "DEBUG Spark 2 on Yarn"
+title: "Spark 2 Memory consumption on Yarn"
 ---
 
 
@@ -11,7 +11,7 @@ title: "DEBUG Spark 2 on Yarn"
 + Hadoop 2.7.7
 + Spark and Hadoop in pseudo distributed mode installed manually without any cluster
 + 4.15.0-43-generic
-+ 4.15.0-43-generic
+
 
 ## DESCRIPTION
 
