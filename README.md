@@ -2,8 +2,7 @@
 title: "README"
 ---
 # Purpose
-
-The scripts in this repos are made to make spark Debugging as easy as possible. 
+This repo contains resources that summarize certain concepts in Spark or that help to perform certain operation with Spark. The scripts in this repos are made to make spark Debugging as easy as possible. 
 
 
 # ExecutorSizing 
