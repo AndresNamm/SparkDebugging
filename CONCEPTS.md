@@ -13,6 +13,8 @@
       + Says If you use ...filter().map(), they will be executed in the same task for each partition, analogous to chaining "mappers" in MapReduce. 
   + RDDs are not mapped to executors. Multiple partitions from an RDD may be served by multiple tasks which may belong to multiple executors.
 + [My draw.io scheme](https://drive.google.com/file/d/14k8NNpXD-LfoAddbX9SpkNPyJEHWh9jL/view?usp=sharing) on How Dataframes and RDDs comprise of partitions which is the parallelization unit in Spark
+  +  ![image](https://user-images.githubusercontent.com/21141607/162903574-dfc050fc-c958-431b-9037-a66d0391417a.png)
+ 
 + References 
   + [Spark partitioning explanation](<https://medium.com/@thejasbabu/spark-under-the-hood-partition-d386aaaa26b7#:~:text=Spark%20spawns%20a%20single%20Task,etc)%20pipelined%20in%20the%20stage.>)
   + [Spark partitioning QA format](https://stackoverflow.com/questions/39324807/spark-executors-tasks#:~:text=Number%20of%20executors%20is%20managed,coalesce%2Frepartition%20functions%20in%20spark.)
